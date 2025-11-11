@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanjay Marison — Scene Flow and Robotic Simulation Research</title>
+  <meta name="description" content="Research project by Sanjay Marison on scene flow extraction, robotic navigation, and real‑time Unreal Engine integration with C++, Python, and Blender." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0a0f1f; --bg2:#1b2a4a; --text:#eaf0ff; --muted:#a7b9ff; --accent:#7da3ff;
+      --glass-bg:rgba(255,255,255,.08); --glass-border:rgba(255,255,255,.2);
+      --shadow:0 10px 30px rgba(5,10,30,.4), inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 10% 10%, #263b6f 0%, transparent 60%),radial-gradient(900px 600px at 90% 30%, #2e245a 0%, transparent 55%),linear-gradient(160deg,var(--bg1),var(--bg2));}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    .glass{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:18px;backdrop-filter:blur(14px)saturate(120%);-webkit-backdrop-filter:blur(14px)saturate(120%);box-shadow:var(--shadow)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:linear-gradient(to bottom,rgba(10,15,30,.6),rgba(10,15,30,0));border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;gap:14px;padding:14px 0}
+    .brand{font-weight:800;font-size:18px}
+    .nav a{color:var(--text);opacity:.9;text-decoration:none;padding:8px 12px;border-radius:12px}
+    .nav a.active,.nav a:hover{background:rgba(255,255,255,.08)}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:24px}
+    .title{font-size:clamp(28px,4vw,46px);margin:0}
+    .subtitle{color:var(--muted);font-size:14px}
+    .badge{border:1px solid rgba(255,255,255,.2);padding:6px 10px;border-radius:999px;font-size:12px;margin-right:6px;background:rgba(255,255,255,.05)}
+    .cta{display:flex;gap:10px;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:var(--text);text-decoration:none}
+    .btn.primary{background:linear-gradient(180deg,rgba(125,163,255,.3),rgba(125,163,255,.15));border-color:rgba(125,163,255,.5)}
+    section{scroll-margin-top:80px;padding:24px}
+    h2{font-size:22px;margin:0 0 10px 0}
+    p{margin:8px 0 16px}
+    .steps{display:grid;gap:12px}
+    .step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:14px;border-radius:14px;border:1px dashed rgba(255,255,255,.25)}
+    .dot{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-weight:700}
+    .figure{aspect-ratio:16/9;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.05));display:grid;place-items:center}
+    .caption{font-size:12px;color:var(--muted);margin-top:6px}
+    footer{text-align:center;color:var(--muted);font-size:12px;padding:24px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Sanjay Marison</div>
+      <nav style="margin-left:auto">
+        <a href="#overview" class="active">Overview</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#demo">Demo</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="overview" class="glass hero">
+      <div>
+        <h1 class="title">Scene Flow Extraction and Robotic Simulation Integration</h1>
+        <p class="subtitle">Research by <strong>Sanjay Marison</strong> · 2025</p>
+        <div>
+          <span class="badge">Unreal Engine</span>
+          <span class="badge">C++ & Python</span>
+          <span class="badge">Scene Flow</span>
+          <span class="badge">Autonomous Robotics</span>
+        </div>
+        <p><strong>Abstract.</strong> This research focuses on the creation of dynamic scene flow in Unreal Engine for high‑fidelity simulation and the extraction of Level‑of‑Detail (LOD) data in real time. A modular interface was built to link Unreal Engine Blueprints, C++, and Python, enabling live bidirectional data exchange for autonomous systems and sensor processing. The system extends into robotics where a language‑driven robot navigates from a natural‑language input of start and goal positions. Additionally, a Blender‑modeled rover uses Unreal Engine's Chaos Vehicle framework and a custom‑built LiDAR sensor, transmitting spatial data to Python for real‑time analysis and environment mapping.</p>
+        <ul>
+          <li>⚡ Developed a complete Unreal Engine–Python–C++ bridge for runtime simulation data.</li>
+          <li>🤖 Created a natural language–based autonomous robot navigation pipeline.</li>
+          <li>🚗 Designed a rover using Blender + Chaos Vehicle + custom LiDAR for sensor streaming.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="#">Paper (PDF)</a>
+          <a class="btn" href="#">Code Repository</a>
+          <a class="btn" href="#demo">Demo</a>
+        </div>
+      </div>
+      <div class="glass" style="padding:14px">
+        <div class="figure">Visualization Placeholder</div>
+        <div class="caption">Real‑time scene flow and sensor simulation view.</div>
+      </div>
+    </section>
+
+    <section id="method" class="glass">
+      <h2>Method</h2>
+      <p>The research integrates simulation and perception using Unreal Engine as a hub for rendering, vehicle physics, and environmental feedback. Three major pipelines were engineered:</p>
+      <div class="steps">
+        <div class="step glass"><div class="dot">1</div><div><strong>Scene Flow Computation:</strong> Implemented a shader‑based optical and depth motion pipeline in Unreal to estimate per‑pixel flow, synchronized with Level‑of‑Detail (LOD) data for efficient rendering and processing.</div></div>
+        <div class="step glass"><div class="dot">2</div><div><strong>Cross‑Language Link:</strong> Established live links between Unreal Engine Blueprints, native C++ modules, and Python scripts via sockets and shared memory for real‑time sensor streaming and AI logic integration.</div></div>
+        <div class="step glass"><div class="dot">3</div><div><strong>Natural‑Language Navigation Robot:</strong> Designed a robotic control module that parses English commands to determine origin and destination, autonomously planning paths using simulated LiDAR and Unreal navmesh.</div></div>
+        <div class="step glass"><div class="dot">4</div><div><strong>Rover Simulation:</strong> Created a Blender‑modeled rover integrated with Unreal's Chaos Vehicle and a custom‑built LiDAR system generating dense point clouds processed by Python for scene understanding.</div></div>
+      </div>
+    </section>
+
+    <section id="results" class="glass">
+      <h2>Results</h2>
+      <p>The combined system demonstrates synchronized Unreal–Python feedback with high‑precision flow estimation and real‑time robotics simulation. Performance results show smooth 60 FPS operation under multi‑sensor load, achieving near‑instantaneous path adaptation for the rover and language‑driven robot.</p>
+      <div class="figure">Performance Dashboard Placeholder</div>
+      <div class="caption">Measured frame latency, LiDAR throughput, and flow accuracy visualizations.</div>
+    </section>
+
+    <section id="demo" class="glass">
+      <h2>Demo</h2>
+      <p>Preview of simulation modules and the robot navigation pipeline.</p>
+      <div class="figure" style="aspect-ratio:16/9">Embedded video or interactive visualization placeholder</div>
+    </section>
+
+    <section id="resources" class="glass">
+      <h2>Resources</h2>
+      <div class="cta">
+        <a class="btn primary" href="#">Paper (PDF)</a>
+        <a class="btn" href="#">Code Repository</a>
+        <a class="btn" href="#">Poster</a>
+        <a class="btn" href="#">Slides</a>
+      </div>
+      <h3 style="margin-top:16px">Citation</h3>
+      <pre>@inproceedings{marison2025sceneflow,
+  title={Scene Flow Extraction and Robotic Simulation Integration},
+  author={Sanjay Marison},
+  booktitle={Independent Research Project},
+  year={2025}
+}</pre>
+    </section>
+
+    <footer>© <span id="year"></span> Sanjay Marison · Last updated <span id="lastUpdated"></span></footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
